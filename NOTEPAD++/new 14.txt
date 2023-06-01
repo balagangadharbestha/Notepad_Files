@@ -1,0 +1,97 @@
+
+
+
+- name: install tom cat
+  hosts: all
+  become: true
+  tasks:
+    - name: install jdk
+	  yum:
+	   name: open-jdk-devel
+	   state: present
+	- name: create tomcat directory
+      file:
+       path: /opt/tomcat/
+       state: directory
+    - name: tomcat install usiong url
+      get_url:
+       url: http://
+       dest: /opt/tomcat/
+    - name: extract
+      unarchive:
+        src: /opt/tomcat/tomcat.tar.gz
+        dest: /opt/tomcat/
+        remote_src: true
+    - name: 		
+
+
+- name: install tom cat
+  hosts: all
+  become: true
+  tasks:
+    - name: install jdk
+	  yum:
+	   name: open-jdk-devel
+	   state: present
+	- name: create tomcat directory
+      file:
+       path: /opt/tomcat/
+       state: directory
+    - name: tomcat install usiong url
+      get_url:
+       url: http://
+       dest: /opt/tomcat/
+    - name: extract
+      unarchive:
+        src: /opt/tomcat/tomcat.tar.gz
+        dest: /opt/tomcat/
+        remote_src: true
+    - name: 		
+
+
+- name: install tom cat
+  hosts: all
+  become: true
+  tasks:
+    - name: install jdk
+	  yum:
+	   name: open-jdk-devel
+	   state: present
+	- name: create tomcat directory
+      file:
+       path: /opt/tomcat/
+       state: directory
+    - name: tomcat install usiong url
+      get_url:
+       url: http://
+       dest: /opt/tomcat/
+    - name: extract
+      unarchive:
+        src: /opt/tomcat/tomcat.tar.gz
+        dest: /opt/tomcat/
+        remote_src: true
+    - name: 		
+
+
+- name: install tom cat
+  hosts: all
+  become: true
+  tasks:
+    - name: install jdk
+	  yum:
+	   name: open-jdk-devel
+	   state: present
+	- name: create tomcat directory
+      file:
+       path: /opt/tomcat/
+       state: directory
+    - name: tomcat install usiong url
+      get_url:
+       url: http://
+       dest: /opt/tomcat/
+    - name: extract
+      unarchive:
+        src: /opt/tomcat/tomcat.tar.gz
+        dest: /opt/tomcat/
+        remote_src: true
+    - name: 		
