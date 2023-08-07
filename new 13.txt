@@ -1,0 +1,47 @@
+---
+- name: Install OpenJDK and Tomcat
+  hosts: all
+  become: true
+  tasks:
+    - name: Install OpenJDK
+      yum:
+        name: java-1.8.0-openjdk
+        state: present
+    - name: Create Tomcat directory
+      file:
+        path: /opt/tomcat/
+        state: directory
+    - name: Download Tomcat tarball
+      get_url:
+        url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.75/bin/apache-tomcat-9.0.75.tar.gz
+        dest: /tmp/apache-tomcat.tar.gz
+    - name: Extract Tomcat tarball
+      unarchive:
+        src: /tmp/apache-tomcat.tar.gz
+        dest: /opt/tomcat/
+        remote_src: true
+    - name: Set CATALINA_HOME environment variable
+      lineinfile:
+        path: /etc/profile.d/tomcat.sh
+        line: export CATALINA_HOME="/opt/apache-tomcat-9.0.75"
+        create: yes
+        mode: 644
+    - name: Set JAVA_HOME environment variable
+      lineinfile:
+        path: /etc/profile.d/tomcat.sh
+        line: export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk"
+        create: yes
+        mode: 644
+    - name: Make the environment variables script executable
+      file:
+        path: /etc/profile.d/tomcat.sh
+        mode: 755
+    - name: Load the environment variables
+      shell: |
+        source /etc/profile.d/tomcat.sh
+    - name: Set execute permission for Tomcat startup script
+      file:
+        path: /opt/tomcat/apache-tomcat-9.0.75/bin/startup.sh
+        mode: +x
+    - name: Start Tomcat service
+      command: /opt/tomcat/apache-tomcat-9.0.75/bin/startup.sh
