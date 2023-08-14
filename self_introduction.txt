@@ -1,0 +1,35 @@
+
+
+
+   hiii this is bala gangadhar i have 4 years of relavent exp in IT,i worked as linux administrator for one year after that i got chancne working on devops in that same company then i started 
+   worked on build and release process management using devops tools as devops engineer 
+  we following  agile methodilogy for every three weeks we have one sprint release in that sprint we will discuss what tasks we need to be completed on time and also we have standup
+  meeting daily
+   coming to hands on experience  
+  1) i worked on scm tool which is  git  in that git i  involved in created new private projects and provide access to developer team and created baranches repositories and 
+	  tags and also involved in completing merge request
+  2) in ci/cd i worked on jenkis we verifiy the pipeline either running properly or not  and used to do creating jobs and  writing  pipline scripts or modifieing existing
+      pipelinescript to build and deploy applications in differnt environment so for that we will get the code from git repository by giving github repository credentials
+	  and for that building  we using maven plugin from jenkins tools to automate these process we also created jenkin job by  using build triggers, pollscm and buildperiodically 
+	  we also using nexus to create artifacts id 
+  3) in terrafom i wrote some terraform scripts or modifieing script as product team requirements and creating multiple resources from aws cloud services like  vpc-deploying,
+      public and private subnets and create S3 bucket store data and create IAM ROLE for specified user and give spicified  access to that users and creating firewall to control
+	  networking traffic  we stored statefiles in s3 bucket
+  4) in nexus we uploading war file after build success into nexus repositories and puling the war file from nexus and deploying into diff environment
+  5) in aws we  using
+	  lambda for automating operations tasks like create or stop instances
+      create vpc-network public and private subnets and vpc peering
+	  creating iam users and give roles to users for managing aws
+	  creating elastic-load-balancer  for autoscaling
+	  setting up edgelocations, s3buckets to store objects
+  6) so finally  monitoring thsese resources by using cloudwatch
+  7) in docker i just wroked modifying docker file as per requirementd to containerization and build images and create docker services and run docker through  pipeline 
+  8) in ansible i worked on differnt modules for configuration like installing and deploying  on various nodes
+	 
+	 
+	 
+	
+	
+	 
+	
+				
